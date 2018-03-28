@@ -1,0 +1,37 @@
+<!-- A Movie has many leaders -->
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Leaders
+      </li>
+
+      <% @movie.leaders.each do |user| %>
+        <li class="list-group-item">
+          <a href="/users/<%= user.id %>">
+            <%= user.email %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <!-- Show link start -->
+            <a href="/users/<%= user.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <!-- Show link end -->
+            <!-- Edit link start -->
+            <a href="/users/<%= user.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <!-- Edit link end -->
+            <!-- Delete link start -->
+            <a href="/delete_user/<%= user.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+            <!-- Delete link end -->
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+

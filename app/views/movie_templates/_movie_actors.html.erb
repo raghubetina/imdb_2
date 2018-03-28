@@ -1,0 +1,37 @@
+<!-- A Movie has many actors -->
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Actors
+      </li>
+
+      <% @movie.actors.each do |actor| %>
+        <li class="list-group-item">
+          <a href="/actors/<%= actor.id %>">
+            <%= actor.name %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <!-- Show link start -->
+            <a href="/actors/<%= actor.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <!-- Show link end -->
+            <!-- Edit link start -->
+            <a href="/actors/<%= actor.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <!-- Edit link end -->
+            <!-- Delete link start -->
+            <a href="/delete_actor/<%= actor.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+            <!-- Delete link end -->
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
