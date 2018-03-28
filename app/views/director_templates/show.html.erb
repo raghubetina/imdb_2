@@ -1,0 +1,72 @@
+<h1>
+  Director #<%= @director.id %> details
+</h1>
+<!-- Edit link director start -->
+<a href="/directors/<%= @director.id %>/edit">
+  Edit director
+</a>
+<!-- Edit link director end -->
+<hr>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <!-- Display name start -->
+  <dd>
+    <%= @director.name %>
+  </dd>
+  <!-- Display name end -->
+
+  <dt>
+    Bio
+  </dt>
+  <!-- Display bio start -->
+  <dd>
+    <%= @director.bio %>
+  </dd>
+  <!-- Display bio end -->
+
+  <dt>
+    Image
+  </dt>
+  <!-- Display image start -->
+  <dd>
+    <%= @director.image %>
+  </dd>
+  <!-- Display image end -->
+
+  <dt>
+    Created at
+  </dt>
+  <!-- Display created_at start -->
+  <dd>
+    <%= time_ago_in_words(@director.created_at) %> ago
+  </dd>
+  <!-- Display created_at end -->
+
+  <dt>
+    Updated at
+  </dt>
+  <!-- Display updated_at start -->
+  <dd>
+    <%= time_ago_in_words(@director.updated_at) %> ago
+  </dd>
+  <!-- Display updated_at end -->
+</dl>
+
+<!-- Delete link director start -->
+<a href="/delete_director/<%= @director.id %>">
+  Delete director
+</a>
+<!-- Delete link director end -->
+
+<hr>
+
+<a href="/directors">
+  Go back
+</a>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
