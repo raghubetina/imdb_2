@@ -14,6 +14,8 @@ RSpec.describe Movie, type: :model do
 
   describe "InDirect Associations" do
 
+    it { should have_many(:leaders) }
+
     it { should have_many(:actors) }
 
   end
