@@ -53,3 +53,6 @@ gem 'devise'
 gem 'draft_generators', git: 'https://github.com/firstdraft/draft_generators.git', branch: '11-add-sentinels-flag-new'
 gem 'web_git', github: 'firstdraft/web_git'
 gem 'activeadmin', '1.2.1'
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'dotenv-rails', :groups => [:development, :test]
