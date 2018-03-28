@@ -50,17 +50,21 @@
     </td>
     <!-- Display bookmark.id end -->
 
-    <!-- Display bookmark.user.email start -->
     <td>
-      <%= bookmark.user.email %>
+      <% if bookmark.user.present? %>
+        <a href="/users/<%= bookmark.user.id %>">
+          <%= bookmark.user.email %>
+        </a>
+      <% end %>
     </td>
-    <!-- Display bookmark.user.email end -->
 
-    <!-- Display bookmark.movie.title start -->
     <td>
-      <%= bookmark.movie.title %>
+      <% if bookmark.movie.present? %>
+        <a href="/movies/<%= bookmark.movie.id %>">
+          <%= bookmark.movie.title %>
+        </a>
+      <% end %>
     </td>
-    <!-- Display bookmark.movie.title end -->
 
     <!-- Display bookmark.created_at start -->
     <td>

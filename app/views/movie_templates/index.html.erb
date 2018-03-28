@@ -70,11 +70,13 @@
     </td>
     <!-- Display movie.year end -->
 
-    <!-- Display movie.director.name start -->
     <td>
-      <%= movie.director.name %>
+      <% if movie.director.present? %>
+        <a href="/directors/<%= movie.director.id %>">
+          <%= movie.director.name %>
+        </a>
+      <% end %>
     </td>
-    <!-- Display movie.director.name end -->
 
     <!-- Display movie.image start -->
     <td>

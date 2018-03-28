@@ -30,11 +30,13 @@
   <dt>
     Director
   </dt>
-  <!-- Display director_id start -->
   <dd>
-    <%= @movie.director_id %>
+    <% if @movie.director.present? %>
+      <a href="/directors/<%= @movie.director_id %>">
+        <%= @movie.director.name %>
+      </a>
+    <% end %>
   </dd>
-  <!-- Display director_id end -->
 
   <dt>
     Image
