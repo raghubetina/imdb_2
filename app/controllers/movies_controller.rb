@@ -6,6 +6,8 @@ class MoviesController < ApplicationController
   end
 
   def show
+    @bookmark = Bookmark.new
+    @casting = Casting.new
     @movie = Movie.find(params.fetch("id_to_display"))
 
     render("movie_templates/show.html.erb")
