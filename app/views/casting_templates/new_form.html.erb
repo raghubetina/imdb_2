@@ -39,9 +39,7 @@
       Actor
     </label>
 
-    <!-- Input for actor_id start -->
-    <input type="text" id="actor_id" name="actor_id" class="form-control" value="<%= @casting.try(:actor_id) %>">
-    <!-- Input for actor_id end -->
+    <%= select_tag(:actor_id, options_from_collection_for_select(Actor.all, :id, :name, @casting.actor_id), :class => "form-control") %>
   </div>
   <!-- Label and input for actor_id end -->
 
