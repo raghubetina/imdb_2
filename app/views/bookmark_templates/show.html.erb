@@ -1,0 +1,63 @@
+<h1>
+  Bookmark #<%= @bookmark.id %> details
+</h1>
+<!-- Edit link bookmark start -->
+<a href="/bookmarks/<%= @bookmark.id %>/edit">
+  Edit bookmark
+</a>
+<!-- Edit link bookmark end -->
+<hr>
+
+<dl>
+  <dt>
+    User
+  </dt>
+  <!-- Display user_id start -->
+  <dd>
+    <%= @bookmark.user_id %>
+  </dd>
+  <!-- Display user_id end -->
+
+  <dt>
+    Movie
+  </dt>
+  <!-- Display movie_id start -->
+  <dd>
+    <%= @bookmark.movie_id %>
+  </dd>
+  <!-- Display movie_id end -->
+
+  <dt>
+    Created at
+  </dt>
+  <!-- Display created_at start -->
+  <dd>
+    <%= time_ago_in_words(@bookmark.created_at) %> ago
+  </dd>
+  <!-- Display created_at end -->
+
+  <dt>
+    Updated at
+  </dt>
+  <!-- Display updated_at start -->
+  <dd>
+    <%= time_ago_in_words(@bookmark.updated_at) %> ago
+  </dd>
+  <!-- Display updated_at end -->
+</dl>
+
+<!-- Delete link bookmark start -->
+<a href="/delete_bookmark/<%= @bookmark.id %>">
+  Delete bookmark
+</a>
+<!-- Delete link bookmark end -->
+
+<hr>
+
+<a href="/bookmarks">
+  Go back
+</a>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
