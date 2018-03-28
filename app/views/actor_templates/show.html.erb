@@ -1,0 +1,81 @@
+<h1>
+  Actor #<%= @actor.id %> details
+</h1>
+<!-- Edit link actor start -->
+<a href="/actors/<%= @actor.id %>/edit">
+  Edit actor
+</a>
+<!-- Edit link actor end -->
+<hr>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <!-- Display name start -->
+  <dd>
+    <%= @actor.name %>
+  </dd>
+  <!-- Display name end -->
+
+  <dt>
+    Bio
+  </dt>
+  <!-- Display bio start -->
+  <dd>
+    <%= @actor.bio %>
+  </dd>
+  <!-- Display bio end -->
+
+  <dt>
+    Image
+  </dt>
+  <!-- Display image start -->
+  <dd>
+    <%= @actor.image %>
+  </dd>
+  <!-- Display image end -->
+
+  <dt>
+    Dob
+  </dt>
+  <!-- Display dob start -->
+  <dd>
+    <%= @actor.dob %>
+  </dd>
+  <!-- Display dob end -->
+
+  <dt>
+    Created at
+  </dt>
+  <!-- Display created_at start -->
+  <dd>
+    <%= time_ago_in_words(@actor.created_at) %> ago
+  </dd>
+  <!-- Display created_at end -->
+
+  <dt>
+    Updated at
+  </dt>
+  <!-- Display updated_at start -->
+  <dd>
+    <%= time_ago_in_words(@actor.updated_at) %> ago
+  </dd>
+  <!-- Display updated_at end -->
+</dl>
+
+<!-- Delete link actor start -->
+<a href="/delete_actor/<%= @actor.id %>">
+  Delete actor
+</a>
+<!-- Delete link actor end -->
+
+<hr>
+
+<a href="/actors">
+  Go back
+</a>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
