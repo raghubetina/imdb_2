@@ -2,9 +2,11 @@
   Friend request #<%= @friend_request.id %> details
 </h1>
 <!-- Edit link friend_request start -->
-<a href="/friend_requests/<%= @friend_request.id %>/edit">
-  Edit friend request
-</a>
+<% if current_user == @friend_request.sender %>
+  <a href="/friend_requests/<%= @friend_request.id %>/edit">
+    Edit friend_request
+  </a>
+<% end %>
 <!-- Edit link friend_request end -->
 <hr>
 
@@ -47,9 +49,11 @@
 </dl>
 
 <!-- Delete link friend_request start -->
-<a href="/delete_friend_request/<%= @friend_request.id %>">
-  Delete friend request
-</a>
+<% if current_user == @friend_request.sender %>
+  <a href="/delete_friend_request/<%= @friend_request.id %>">
+    Delete friend_request
+  </a>
+<% end %>
 <!-- Delete link friend_request end -->
 
 <hr>

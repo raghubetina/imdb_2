@@ -19,6 +19,8 @@
             </a>
             <!-- Show link end -->
             <!-- Edit link start -->
+            <%if current_user == bookmark.user %>
+            <!-- Edit link start -->
             <a href="/bookmarks/<%= bookmark.id %>/edit" class="btn btn-warning">
               <i class="fa fa-edit"></i>
             </a>
@@ -27,6 +29,8 @@
             <a href="/delete_bookmark/<%= bookmark.id %>" class="btn btn-danger" rel="nofollow">
               <i class="fa fa-trash-o"></i>
             </a>
+            <!-- Delete link end -->
+            <% end %>
             <!-- Delete link end -->
           </div>
         </li>
