@@ -1,0 +1,72 @@
+<h1>
+  Casting #<%= @casting.id %> details
+</h1>
+<!-- Edit link casting start -->
+<a href="/castings/<%= @casting.id %>/edit">
+  Edit casting
+</a>
+<!-- Edit link casting end -->
+<hr>
+
+<dl>
+  <dt>
+    Movie
+  </dt>
+  <!-- Display movie_id start -->
+  <dd>
+    <%= @casting.movie_id %>
+  </dd>
+  <!-- Display movie_id end -->
+
+  <dt>
+    Actor
+  </dt>
+  <!-- Display actor_id start -->
+  <dd>
+    <%= @casting.actor_id %>
+  </dd>
+  <!-- Display actor_id end -->
+
+  <dt>
+    Character name
+  </dt>
+  <!-- Display character_name start -->
+  <dd>
+    <%= @casting.character_name %>
+  </dd>
+  <!-- Display character_name end -->
+
+  <dt>
+    Created at
+  </dt>
+  <!-- Display created_at start -->
+  <dd>
+    <%= time_ago_in_words(@casting.created_at) %> ago
+  </dd>
+  <!-- Display created_at end -->
+
+  <dt>
+    Updated at
+  </dt>
+  <!-- Display updated_at start -->
+  <dd>
+    <%= time_ago_in_words(@casting.updated_at) %> ago
+  </dd>
+  <!-- Display updated_at end -->
+</dl>
+
+<!-- Delete link casting start -->
+<a href="/delete_casting/<%= @casting.id %>">
+  Delete casting
+</a>
+<!-- Delete link casting end -->
+
+<hr>
+
+<a href="/castings">
+  Go back
+</a>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

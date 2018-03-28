@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Casting resource:
+
+  # CREATE
+  get("/castings/new", { :controller => "castings", :action => "new_form" })
+  post("/create_casting", { :controller => "castings", :action => "create_row" })
+
+  # READ
+  get("/castings", { :controller => "castings", :action => "index" })
+  get("/castings/:id_to_display", { :controller => "castings", :action => "show" })
+
+  # UPDATE
+  get("/castings/:prefill_with_id/edit", { :controller => "castings", :action => "edit_form" })
+  post("/update_casting/:id_to_modify", { :controller => "castings", :action => "update_row" })
+
+  # DELETE
+  get("/delete_casting/:id_to_remove", { :controller => "castings", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Actor resource:
 
   # CREATE
