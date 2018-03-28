@@ -50,3 +50,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails'
 gem 'shoulda-matchers'
 gem 'devise'
+gem 'draft_generators', git: 'https://github.com/firstdraft/draft_generators.git', branch: '11-add-sentinels-flag-new'

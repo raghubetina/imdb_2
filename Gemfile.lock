@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/firstdraft/draft_generators.git
+  revision: 71ec2594aa26c72d950681196d5f3baf97cedf51
+  branch: 11-add-sentinels-flag-new
+  specs:
+    draft_generators (0.0.3)
+      devise
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -204,6 +212,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
+  draft_generators!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
