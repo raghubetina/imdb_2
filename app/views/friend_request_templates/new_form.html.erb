@@ -29,9 +29,7 @@
       Sender
     </label>
 
-    <!-- Input for sender_id start -->
-    <input type="text" id="sender_id" name="sender_id" class="form-control" value="<%= @friend_request.try(:sender_id) %>">
-    <!-- Input for sender_id end -->
+    <%= select_tag(:sender_id, options_from_collection_for_select(User.all, :id, :email, @friend_request.sender_id), :class => "form-control") %>
   </div>
   <!-- Label and input for sender_id end -->
 
