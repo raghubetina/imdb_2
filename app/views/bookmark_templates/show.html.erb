@@ -2,9 +2,11 @@
   Bookmark #<%= @bookmark.id %> details
 </h1>
 <!-- Edit link bookmark start -->
-<a href="/bookmarks/<%= @bookmark.id %>/edit">
-  Edit bookmark
-</a>
+<% if current_user == @bookmark.user %>
+  <a href="/bookmarks/<%= @bookmark.id %>/edit">
+    Edit bookmark
+  </a>
+<% end %>
 <!-- Edit link bookmark end -->
 <hr>
 
@@ -47,9 +49,11 @@
 </dl>
 
 <!-- Delete link bookmark start -->
-<a href="/delete_bookmark/<%= @bookmark.id %>">
-  Delete bookmark
-</a>
+<% if current_user == @bookmark.user %>
+  <a href="/delete_bookmark/<%= @bookmark.id %>">
+    Delete bookmark
+  </a>
+<% end %>
 <!-- Delete link bookmark end -->
 
 <hr>
