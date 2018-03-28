@@ -4,15 +4,7 @@
   <!-- Form bookmark end -->
 
     <!-- Label and input for user_id start -->
-    <div class="form-group">
-      <label for="user_id">
-        User
-      </label>
-
-      <!-- Input for user_id start -->
-      <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @bookmark.try(:user_id) %>">
-      <!-- Input for user_id end -->
-    </div>
+    <input type="hidden" name="user_id" value="<%= current_user.id %>">
     <!-- Label and input for user_id end -->
 
     <!-- Label and input for movie_id start -->
