@@ -1,0 +1,58 @@
+<h1>
+  User #<%= @user.id %> details
+</h1>
+<!-- Edit link user start -->
+<a href="/users/<%= @user.id %>/edit">
+  Edit user
+</a>
+<!-- Edit link user end -->
+<hr>
+
+<dl>
+  <dt>
+    Email
+  </dt>
+  <!-- Display email start -->
+  <dd>
+    <%= @user.email %>
+  </dd>
+  <!-- Display email end -->
+
+  <dt>
+    Password
+  </dt>
+  <!-- Display password start -->
+  <dd>
+    <%= @user.password %>
+  </dd>
+  <!-- Display password end -->
+
+  <dt>
+    Created at
+  </dt>
+  <!-- Display created_at start -->
+  <dd>
+    <%= time_ago_in_words(@user.created_at) %> ago
+  </dd>
+  <!-- Display created_at end -->
+
+  <dt>
+    Updated at
+  </dt>
+  <!-- Display updated_at start -->
+  <dd>
+    <%= time_ago_in_words(@user.updated_at) %> ago
+  </dd>
+  <!-- Display updated_at end -->
+</dl>
+
+
+<hr>
+
+<a href="/users">
+  Go back
+</a>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
