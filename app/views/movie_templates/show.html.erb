@@ -1,35 +1,34 @@
 <h1>
   Movie #<%= @movie.id %> details
 </h1>
-<!-- Edit link movie start -->
+
 <a href="/movies/<%= @movie.id %>/edit">
   Edit movie
 </a>
-<!-- Edit link movie end -->
+
 <hr>
 
 <dl>
   <dt>
     Title
   </dt>
-  <!-- Display title start -->
+
   <dd>
     <%= @movie.title %>
   </dd>
-  <!-- Display title end -->
 
   <dt>
     Year
   </dt>
-  <!-- Display year start -->
+
   <dd>
     <%= @movie.year %>
   </dd>
-  <!-- Display year end -->
 
   <dt>
     Director
   </dt>
+
   <dd>
     <% if @movie.director.present? %>
       <a href="/directors/<%= @movie.director_id %>">
@@ -41,36 +40,31 @@
   <dt>
     Image
   </dt>
-  <!-- Display image start -->
+
   <dd>
     <%= @movie.image %>
   </dd>
-  <!-- Display image end -->
 
   <dt>
     Created at
   </dt>
-  <!-- Display created_at start -->
+
   <dd>
     <%= time_ago_in_words(@movie.created_at) %> ago
   </dd>
-  <!-- Display created_at end -->
 
   <dt>
     Updated at
   </dt>
-  <!-- Display updated_at start -->
+
   <dd>
     <%= time_ago_in_words(@movie.updated_at) %> ago
   </dd>
-  <!-- Display updated_at end -->
 </dl>
 
-<!-- Delete link movie start -->
 <a href="/delete_movie/<%= @movie.id %>">
   Delete movie
 </a>
-<!-- Delete link movie end -->
 
 <hr>
 
@@ -79,9 +73,15 @@
 </a>
 
 <%= render partial: "movie_templates/movie_characters" %>
+
 <%= render partial: "movie_templates/movie_characters_new_form" %>
+
 <%= render partial: "movie_templates/movie_bookmarks" %>
+
 <%= render partial: "movie_templates/movie_bookmarks_new_form" %>
+
 <%= render partial: "movie_templates/movie_actors" %>
+
 <%= render partial: "movie_templates/movie_leaders" %>
+
 <%= render partial: "movie_templates/movie_fans" %>
