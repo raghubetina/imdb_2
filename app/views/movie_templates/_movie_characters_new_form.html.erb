@@ -1,46 +1,29 @@
-<li class="list-group-item">
-  <!-- Form casting start -->
-  <form action="/create_casting" method="post">
-  <!-- Form casting end -->
+<form action="/create_casting" method="post">
+  <div class="form-group">
+    <label for="movie_id">
+      Movie
+    </label>
 
-    <!-- Label and input for movie_id start -->
-    <div class="form-group">
-      <label for="movie_id">
-        Movie
-      </label>
+    <input type="text" id="movie_id" name="movie_id" class="form-control" value="<%= @casting.try(:movie_id) %>">
+  </div>
 
-      <!-- Input for movie_id start -->
-      <input type="text" id="movie_id" name="movie_id" class="form-control" value="<%= @casting.try(:movie_id) %>">
-      <!-- Input for movie_id end -->
-    </div>
-    <!-- Label and input for movie_id end -->
+  <div class="form-group">
+    <label for="actor_id">
+      Actor
+    </label>
 
-    <!-- Label and input for actor_id start -->
-    <div class="form-group">
-      <label for="actor_id">
-        Actor
-      </label>
+    <input type="text" id="actor_id" name="actor_id" class="form-control" value="<%= @casting.try(:actor_id) %>">
+  </div>
 
-      <!-- Input for actor_id start -->
-      <input type="text" id="actor_id" name="actor_id" class="form-control" value="<%= @casting.try(:actor_id) %>">
-      <!-- Input for actor_id end -->
-    </div>
-    <!-- Label and input for actor_id end -->
+  <div class="form-group">
+    <label for="character_name">
+      Character name
+    </label>
 
-    <!-- Label and input for character_name start -->
-    <div class="form-group">
-      <label for="character_name">
-        Character name
-      </label>
+    <input type="text" id="character_name" name="character_name" class="form-control" value="<%= @casting.try(:character_name) %>">
+  </div>
 
-      <!-- Input for character_name start -->
-      <input type="text" id="character_name" name="character_name" class="form-control" value="<%= @casting.try(:character_name) %>">
-      <!-- Input for character_name end -->
-    </div>
-    <!-- Label and input for character_name end -->
-
-    <button class="btn btn-block btn-outline-secondary">
-      Create casting
-    </button>
-  </form>
-</li>
+  <button class="btn btn-block btn-outline-secondary">
+    Create casting
+  </button>
+</form>
