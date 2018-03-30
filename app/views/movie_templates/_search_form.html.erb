@@ -25,8 +25,8 @@
         <%= f.label :created_at, "Created at" %>
 
         <div class="row">
-          <div class='col-md-6 mb-1'>
-            <div class='input-group date' id='created_atgteqPicker'>
+          <div class="col-md-6 mb-1">
+            <div class="input-group date" id="created_atgteqPicker">
               <%= f.text_field :created_at_gteq, :class => "form-control", :placeholder => "Created at greater than or equal to" %>
 
               <span class="input-group-addon">
@@ -35,8 +35,8 @@
             </div>
           </div>
 
-          <div class='col-md-6'>
-            <div class='input-group date' id='created_atlteqPicker'>
+          <div class="col-md-6">
+            <div class="input-group date" id="created_atlteqPicker">
               <%= f.text_field :created_at_lteq, :class => "form-control", :placeholder => "Created at less than or equal to" %>
 
               <span class="input-group-addon">
@@ -49,18 +49,18 @@
 
       <script type="text/javascript">
         $(function () {
-          $('#created_atgteqPicker').datetimepicker({
-            format: 'YYYY-MM-DD hh:mm:SS'
+          $("#created_atgteqPicker").datetimepicker({
+            format: "YYYY-MM-DD hh:mm:SS"
           });
-          $('#created_atlteqPicker').datetimepicker({
+          $("#created_atlteqPicker").datetimepicker({
             useCurrent: false,
-            format: 'YYYY-MM-DD hh:mm:SS'
+            format: "YYYY-MM-DD hh:mm:SS"
           });
-          $('#created_atgteqPicker').on("dp.change", function (e) {
-            $('#created_atlteqPicker').data("DateTimePicker").minDate(e.date);
+          $("#created_atgteqPicker").on("dp.change", function (e) {
+            $("#created_atlteqPicker").data("DateTimePicker").minDate(e.date);
           });
-          $('#created_atlteqPicker').on("dp.change", function (e) {
-            $('#created_atgteqPicker').data("DateTimePicker").maxDate(e.date);
+          $("#created_atlteqPicker").on("dp.change", function (e) {
+            $("#created_atgteqPicker").data("DateTimePicker").maxDate(e.date);
           });
         });
       </script>
@@ -91,7 +91,7 @@
 
       <div class="form-group">
         <%= f.label :fans_email_cont, "User email contains" %>
-        
+
         <%= f.text_field :fans_email_cont, :class => "form-control", :placeholder => "User email contains" %>
       </div>
 
