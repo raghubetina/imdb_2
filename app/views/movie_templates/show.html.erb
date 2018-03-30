@@ -1,76 +1,80 @@
-<h1>
-  Movie #<%= @movie.id %> details
-</h1>
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Movie #<%= @movie.id %> details
+    </h1>
 
-<a href="/movies/<%= @movie.id %>/edit">
-  Edit movie
-</a>
+    <a href="/movies/<%= @movie.id %>/edit">
+      Edit movie
+    </a>
 
-<hr>
+    <hr>
 
-<dl>
-  <dt>
-    Title
-  </dt>
+    <dl>
+      <dt>
+        Title
+      </dt>
 
-  <dd>
-    <%= @movie.title %>
-  </dd>
+      <dd>
+        <%= @movie.title %>
+      </dd>
 
-  <dt>
-    Year
-  </dt>
+      <dt>
+        Year
+      </dt>
 
-  <dd>
-    <%= @movie.year %>
-  </dd>
+      <dd>
+        <%= @movie.year %>
+      </dd>
 
-  <dt>
-    Director
-  </dt>
+      <dt>
+        Director
+      </dt>
 
-  <dd>
-    <% if @movie.director.present? %>
-      <a href="/directors/<%= @movie.director_id %>">
-        <%= @movie.director.name %>
-      </a>
-    <% end %>
-  </dd>
+      <dd>
+        <% if @movie.director.present? %>
+          <a href="/directors/<%= @movie.director_id %>">
+            <%= @movie.director.name %>
+          </a>
+        <% end %>
+      </dd>
 
-  <dt>
-    Image
-  </dt>
+      <dt>
+        Image
+      </dt>
 
-  <dd>
-    <%= @movie.image %>
-  </dd>
+      <dd>
+        <%= @movie.image %>
+      </dd>
 
-  <dt>
-    Created at
-  </dt>
+      <dt>
+        Created at
+      </dt>
 
-  <dd>
-    <%= time_ago_in_words(@movie.created_at) %> ago
-  </dd>
+      <dd>
+        <%= time_ago_in_words(@movie.created_at) %> ago
+      </dd>
 
-  <dt>
-    Updated at
-  </dt>
+      <dt>
+        Updated at
+      </dt>
 
-  <dd>
-    <%= time_ago_in_words(@movie.updated_at) %> ago
-  </dd>
-</dl>
+      <dd>
+        <%= time_ago_in_words(@movie.updated_at) %> ago
+      </dd>
+    </dl>
 
-<a href="/delete_movie/<%= @movie.id %>">
-  Delete movie
-</a>
+    <a href="/delete_movie/<%= @movie.id %>">
+      Delete movie
+    </a>
 
-<hr>
+    <hr>
 
-<a href="/movies">
-  Go back
-</a>
+    <a href="/movies">
+      Go back
+    </a>
+  </div>
+</div>
 
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
