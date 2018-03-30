@@ -1,10 +1,12 @@
 <form action="/create_casting" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+  
   <div class="form-group">
     <label for="movie_id">
       Movie
     </label>
 
-    <input type="text" id="movie_id" name="movie_id" class="form-control" value="<%= @casting.try(:movie_id) %>">
+    <%= select_tag(:movie_id, options_from_collection_for_select(Movie.all, :id, :title, @casting.movie_id), :class => "form-control") %>
   </div>
 
   <div class="form-group">
@@ -12,7 +14,7 @@
       Actor
     </label>
 
-    <input type="text" id="actor_id" name="actor_id" class="form-control" value="<%= @casting.try(:actor_id) %>">
+    <%= select_tag(:actor_id, options_from_collection_for_select(Actor.all, :id, :name, @casting.actor_id), :class => "form-control") %>
   </div>
 
   <div class="form-group">
