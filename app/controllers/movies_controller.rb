@@ -16,7 +16,7 @@ class MoviesController < ApplicationController
 
   def new_form
     @movie = Movie.new
-    
+
     render("movie_templates/new_form.html.erb")
   end
 
@@ -25,7 +25,7 @@ class MoviesController < ApplicationController
 
     @movie.title = params.fetch("title")
     @movie.year = params.fetch("year")
-    @movie.director_id = params.fetch("director_id")
+    @movie.director_id = params.fetch("director_id", "")
     @movie.image = params.fetch("image")
 
     if @movie.valid?

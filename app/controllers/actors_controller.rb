@@ -15,7 +15,7 @@ class ActorsController < ApplicationController
 
   def new_form
     @actor = Actor.new
-    
+
     render("actor_templates/new_form.html.erb")
   end
 
@@ -24,7 +24,7 @@ class ActorsController < ApplicationController
 
     @actor.name = params.fetch("name")
     @actor.bio = params.fetch("bio")
-    @actor.image = params.fetch("image")
+    @actor.image = params.fetch("image", "")
     @actor.dob = params.fetch("dob")
 
     if @actor.valid?

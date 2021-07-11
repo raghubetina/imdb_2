@@ -1,37 +1,27 @@
-<!-- A Movie has many characters -->
-
-<div class="row mb-3">
-  <div class="col-md-12">
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-info">
-        Characters
-      </li>
-
-      <% @movie.characters.each do |casting| %>
-        <li class="list-group-item">
-          <a href="/castings/<%= casting.id %>">
-            <%= casting.character_name %>
-          </a>
-          <div class="btn-group btn-group-xs pull-right">
-            <!-- Show link start -->
-            <a href="/castings/<%= casting.id %>" class="btn btn-primary">
-              <i class="fa fa-search-plus"></i>
-            </a>
-            <!-- Show link end -->
-            <!-- Edit link start -->
-            <a href="/castings/<%= casting.id %>/edit" class="btn btn-warning">
-              <i class="fa fa-edit"></i>
-            </a>
-            <!-- Edit link end -->
-            <!-- Delete link start -->
-            <a href="/delete_casting/<%= casting.id %>" class="btn btn-danger" rel="nofollow">
-              <i class="fa fa-trash-o"></i>
-            </a>
-            <!-- Delete link end -->
-          </div>
-        </li>
-      <% end %>
-    </ul>
+<div class="card">
+  <div class="card-header">
+    Characters
   </div>
-</div>
 
+  <ul class="list-group list-group-flush">
+    <% @movie.characters.each do |casting| %>
+      <li class="list-group-item">
+        <a href="/castings/<%= casting.id %>">
+          <%= casting.character_name %>
+        </a>
+      </li>
+    <% end %>
+
+    <li class="list-group-item list-group-item-light">
+      <div class="text-right">
+        <a data-toggle="collapse" href="#movie_characters_new_form">
+          Add a casting to this movie
+        </a>
+      </div>
+
+      <div id="movie_characters_new_form" class="collapse">
+        <%= render partial: "movie_templates/movie_characters_new_form" %>
+      </div>
+    </li>
+  </ul>
+</div>
